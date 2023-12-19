@@ -593,7 +593,7 @@ class TrainValDataset(Dataset):
             return img_path, labels, nc, nm, nf, ne, msg
         except Exception as e:
             nc = 1
-            print(img_path)
+            print(img_path, e)
             msg = f"WARNING: {lb_path}: ignoring invalid labels: {e}"
             return img_path, None, nc, nm, nf, ne, msg
 
